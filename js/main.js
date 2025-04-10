@@ -65,6 +65,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const projectsData = [
     {
       id: 1,
+      title: 'Python Ray Marching Renderer',
+      category: 'app',
+      description: 'A 3D graphics renderer implemented in Python using ray marching techniques for realistic rendering.',
+      detailedDescription: 'This project implements a ray marching renderer in Python that creates stunning 3D visuals through distance field calculations. Ray marching is an advanced rendering technique that allows for efficient rendering of complex 3D scenes. The project features real-time rendering capabilities, support for various primitives, and realistic lighting effects through global illumination calculations.',
+      image: 'ray-marching.jpg',
+      liveUrl: 'https://github.com/donat19/python_reymarching_render',
+      codeUrl: 'https://github.com/donat19/python_reymarching_render',
+      techStack: ['Python', 'NumPy', 'Computer Graphics', 'Ray Marching', 'Distance Fields']
+    },
+    {
+      id: 2,
       title: 'E-Commerce Website',
       category: 'web',
       description: 'A fully responsive e-commerce platform with product filtering, cart functionality, and user authentication.',
@@ -75,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
       techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'SASS']
     },
     {
-      id: 2,
+      id: 3,
       title: 'Mobile App UI Design',
       category: 'design',
       description: 'UI/UX design for a fitness tracking mobile application with a clean, modern interface.',
@@ -86,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       techStack: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Prototyping']
     },
     {
-      id: 3,
+      id: 4,
       title: 'Task Management App',
       category: 'app',
       description: 'A web application for managing tasks, projects, and team collaboration.',
@@ -97,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       techStack: ['Vue.js', 'Firebase', 'Vuex', 'TailwindCSS', 'Jest']
     },
     {
-      id: 4,
+      id: 5,
       title: 'Portfolio Template',
       category: 'web',
       description: 'A customizable portfolio template for developers and designers to showcase their work.',
@@ -152,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <h3 class="project-title">${project.title}</h3>
           <p class="project-description">${project.description}</p>
           <div class="project-links">
-            <a href="${project.liveUrl}" class="btn primary" target="_blank">Live Demo</a>
+            <a href="${project.liveUrl}" class="btn primary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             <a href="${project.codeUrl}" class="btn secondary" target="_blank">View Code</a>
             <button class="btn secondary view-details" data-id="${project.id}">View Details</button>
           </div>
@@ -225,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
           <div class="project-links">
-            <a href="${project.liveUrl}" class="btn primary" target="_blank">Live Demo</a>
+            <a href="${project.liveUrl}" class="btn primary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             <a href="${project.codeUrl}" class="btn secondary" target="_blank">View Code</a>
           </div>
         </div>
@@ -471,7 +482,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>${project.description}</p>
             <div class="carousel-links">
               <button class="btn secondary view-details" data-id="${project.id}">View Details</button>
-              <a href="${project.liveUrl}" class="btn primary" target="_blank">Live Demo</a>
+              <a href="${project.liveUrl}" class="btn primary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
         </div>
