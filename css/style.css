@@ -1178,3 +1178,36 @@ footer {
     top: 15px;
   }
 }
+
+/* Project gallery for multiple images */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--box-shadow);
+}
+
+/* Placeholder styling for missing images */
+.gallery-img-container.placeholder {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--border-radius-sm);
+}
+
+.placeholder img {
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+}

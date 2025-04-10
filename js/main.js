@@ -66,10 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
     {
       id: 1,
       title: 'Python Ray Marching Renderer',
-      category: 'app',
+      category: 'graphics',
       description: 'A 3D graphics renderer implemented in Python using ray marching techniques for realistic rendering.',
       detailedDescription: 'This project implements a ray marching renderer in Python that creates stunning 3D visuals through distance field calculations. Ray marching is an advanced rendering technique that allows for efficient rendering of complex 3D scenes. The project features real-time rendering capabilities, support for various primitives, and realistic lighting effects through global illumination calculations.',
-      image: 'ray-marching.jpg',
+      image: 'ray-marching-1.jpg',
+      images: ['ray-marching-1.jpg', 'ray-marching-2.jpg', 'ray-marching-3.jpg'],
       liveUrl: 'https://github.com/donat19/python_reymarching_render',
       codeUrl: 'https://github.com/donat19/python_reymarching_render',
       techStack: ['Python', 'NumPy', 'Computer Graphics', 'Ray Marching', 'Distance Fields']
@@ -157,7 +158,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const projectCard = document.createElement('div');
       projectCard.className = 'project-card fade-in';
       projectCard.innerHTML = `
-        <div class="project-image">${project.image ? `<img src="assets/images/${project.image}" alt="${project.title}">` : project.title}</div>
+        <div class="project-image">
+          ${project.image ? 
+            `<img src="assets/images/${project.image}" alt="${project.title}" 
+                  onerror="this.onerror=null; this.src='https://via.placeholder.com/400x200?text=${encodeURIComponent(project.title)}';">` 
+            : project.title}
+        </div>
         <div class="project-info">
           <span class="project-category">${project.category}</span>
           <h3 class="project-title">${project.title}</h3>
@@ -218,11 +224,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const project = projectsData.find(p => p.id === projectId);
     if (!project || !modalContent || !modal) return;
     
+    // Create image gallery if multiple images exist
+    let imageGallery = '';
+    if (project.images && project.images.length > 1) {
+      imageGallery = `
+        <div class="project-gallery">
+          ${project.images.map(img => 
+            `<div class="gallery-img-container">
+              <img src="assets/images/${img}" alt="${project.title}" 
+                   class="gallery-img" 
+                   onerror="this.onerror=null; this.src='https://via.placeholder.com/400x250?text=Ray+Marching+Render'; this.parentElement.classList.add('placeholder');">
+            </div>`
+          ).join('')}
+        </div>
+      `;
+    } else {
+      imageGallery = `
+        <div class="project-detail-image">
+          <img src="assets/images/${project.image}" alt="${project.title}" 
+               onerror="this.onerror=null; this.src='https://via.placeholder.com/800x400?text=Project+Image';">
+        </div>
+      `;
+    }
+    
     modalContent.innerHTML = `
       <div class="project-detail">
-        <div class="project-detail-image">
-          <img src="assets/images/${project.image}" alt="${project.title}">
-        </div>
+        ${imageGallery}
         <div class="project-detail-info">
           <span class="project-detail-category">${project.category}</span>
           <h2>${project.title}</h2>
@@ -475,7 +502,8 @@ document.addEventListener('DOMContentLoaded', function() {
       slide.innerHTML = `
         <div class="carousel-project">
           <div class="carousel-image">
-            <img src="assets/images/${project.image}" alt="${project.title}">
+            <img src="assets/images/${project.image}" alt="${project.title}" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600x450?text=${encodeURIComponent(project.title)}';">
           </div>
           <div class="carousel-content">
             <h3>${project.title}</h3>
