@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website showcasing my web development and design projects">
+    <title>Ivan's Portfolio | Web Developer & Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <a href="#">Ivan<span class="highlight">.</span>dev</a>
+                </div>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox" title="Toggle dark mode">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </label>
+                </div>
+                <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
+                    <div class="hamburger"></div>
+                </button>
+                <ul id="primary-navigation" class="primary-navigation">
+                    <li><a href="#home"><i class="fas fa-house-user fa-fw"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user fa-fw"></i> About</a></li>
+                    <li><a href="#resume"><i class="fas fa-file-alt fa-fw"></i> Resume</a></li>
+                    <li><a href="#projects"><i class="fas fa-code fa-fw"></i> Projects</a></li>
+                    <li><a href="#skills"><i class="fas fa-tools fa-fw"></i> Skills</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Ivan</span></h1>
+                    <h2 class="typing-text" id="typingText">Web Developer & Designer</h2>
+                    <p>I create beautiful and functional websites with clean code.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary"><i class="fas fa-code"></i> View My Work</a>
+                        <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                        <a href="assets/files/resume.pdf" class="btn secondary" download><i class="fas fa-download"></i> Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about"><i class="fas fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <div class="placeholder-image">Your Photo</div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm a passionate web developer focused on creating clean, user-friendly experiences. With a background in design and programming, I bring both aesthetic and technical skills to every project.</p>
+                        <p>I enjoy solving complex problems and turning ideas into reality through elegant interfaces. When I'm not coding, you can find me exploring new technologies, contributing to open-source, or enjoying outdoor activities.</p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <h3>Web Development</h3>
+                                <p>Creating responsive, accessible websites</p>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-gamepad"></i>
+                                <h3>Game Development</h3>
+                                <p>Building games with Godot Engine</p>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code-branch"></i>
+                                <h3>Problem Solver</h3>
+                                <p>Finding elegant solutions to complex problems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-content">
+                    <div class="resume-column">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="resume-item">
+                            <h4>Web Development Program</h4>
+                            <p class="resume-location">Keyin College</p>
+                            <p class="resume-date">Present</p>
+                            <p>Currently pursuing advanced studies in web development, focusing on full-stack technologies and industry best practices.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Web Development Courses</h4>
+                            <p class="resume-location">ANSI Support Program, Canada</p>
+                            <p class="resume-date">2022</p>
+                            <p>Completed comprehensive web development training with the support of ANSI in Canada, covering modern front-end and back-end technologies.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Canadian School Graduate</h4>
+                            <p class="resume-location">Canadian Education System</p>
+                            <p class="resume-date">2021</p>
+                            <p>Completed secondary education in the Canadian school system, focusing on computer science and digital technologies.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Ukrainian School Graduate</h4>
+                            <p class="resume-location">Ukraine</p>
+                            <p class="resume-date">2019</p>
+                            <p>Completed primary and secondary education in Ukraine with strong foundations in mathematics and sciences.</p>
+                        </div>
+                    </div>
+                    <div class="resume-column">
+                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                        <div class="resume-item">
+                            <h4>Junior Web Developer</h4>
+                            <p class="resume-location">Tech Solutions Inc.</p>
+                            <p class="resume-date">2022 - Present</p>
+                            <p>Building responsive websites and web applications using modern frontend technologies. Experienced with Python for backend development and Godot for interactive experiences and game development.</p>
+                        </div>
+                        <div class="resume-item">
+                            <h4>Technical Skills</h4>
+                            <p class="resume-location">Programming Languages & Frameworks</p>
+                            <p class="resume-date">Continuously Updated</p>
+                            <div class="tech-tags resume-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Godot</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-download">
+                    <a href="assets/files/resume.pdf" class="btn primary" download><i class="fas fa-download"></i> Download Full Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                
+                <!-- Featured Project Carousel -->
+                <div class="project-carousel-container">
+                    <h3>Featured Projects</h3>
+                    <div class="project-carousel" id="projectCarousel">
+                        <!-- Carousel will be populated by JavaScript -->
+                    </div>
+                    <div class="carousel-controls">
+                        <button id="prevProject" class="carousel-control"><i class="fas fa-chevron-left"></i></button>
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <!-- Indicators will be added with JavaScript -->
+                        </div>
+                        <button id="nextProject" class="carousel-control"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Existing project filters and grid -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                    <button class="filter-btn" data-filter="app">Applications</button>
+                </div>
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Projects will be loaded dynamically with JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Frontend</h3>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">HTML</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 90%;" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">CSS</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%;" data-level="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 80%;" data-level="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%;" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 75%;" data-level="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-gamepad"></i> Tools & Frameworks</h3>
+                        <div class="skill-bars">
+                            <div class="skill">
+                                <div class="skill-name">Godot Engine</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%;" data-level="65"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">Git</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%;" data-level="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out to me for collaborations or questions.</p>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> email@example.com</li>
+                            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                            <li><i class="fas fa-map-marker-alt"></i> City, Country</li>
+                        </ul>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mini-game">
+            <div class="container">
+                <h2 class="section-title">Mini Game</h2>
+                <p>Test your reflexes! Click on the squares as they appear.</p>
+                <div class="game-container">
+                    <div id="game-area">
+                        <div class="game-stats">
+                            <div>Score: <span id="score">0</span></div>
+                            <div>Time: <span id="time">30</span>s</div>
+                        </div>
+                        <div id="game-board"></div>
+                        <button id="start-game" class="btn primary">Start Game</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; <span id="currentYear"></span> Ivan. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
