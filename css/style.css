@@ -17,6 +17,11 @@
   --color-success: #48bb78;
   --color-error: #f56565;
   
+  /* Scrollbar Colors */
+  --scrollbar-thumb: var(--color-primary-light);
+  --scrollbar-track: var(--color-bg-alt);
+  --scrollbar-hover: var(--color-primary);
+  
   /* Spacing scale */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -53,8 +58,41 @@ html[data-theme='dark'] {
   --color-text: #f1f5f9;
   --color-text-light: #cbd5e1;
   --color-border: #334155;
+  
+  /* Scrollbar Colors - Dark Theme */
+  --scrollbar-thumb: var(--color-primary-dark);
+  --scrollbar-track: #141e33;
+  --scrollbar-hover: var(--color-primary-light);
+  
   --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
   --box-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar Styling */
+/* For Webkit browsers (Chrome, Safari, Opera, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-hover);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 /* Global styles */
@@ -282,8 +320,26 @@ html[data-theme='dark'] .navbar {
   margin-left: var(--spacing-sm);
 }
 
+/* Visibility control for mobile/desktop elements */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
 /* Mobile navigation adjustments */
 @media (max-width: 768px) {
+  /* Reverse visibility */
+  .mobile-only {
+    display: block;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+
   .navbar-container {
     padding: 0 var(--spacing-xs);
   }
@@ -318,6 +374,7 @@ html[data-theme='dark'] .navbar {
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
     margin: 0;
     gap: var(--spacing-md);
+    overflow-y: auto; /* Add scroll if needed */
   }
   
   .primary-navigation.show {
@@ -331,6 +388,31 @@ html[data-theme='dark'] .navbar {
   .primary-navigation a i {
     font-size: 1.1rem;
     min-width: 25px;
+  }
+
+  .theme-switch-item {
+    margin-top: var(--spacing-md);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--spacing-md);
+  }
+  
+  .theme-switch-item .theme-switch-wrapper {
+    margin-left: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .theme-switch-item .theme-switch {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: var(--spacing-sm);
+  }
+  
+  .theme-switch-item span {
+    font-weight: 500;
+    margin-right: auto;
   }
 }
 

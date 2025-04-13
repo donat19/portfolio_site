@@ -5,29 +5,44 @@ document.addEventListener('DOMContentLoaded', function() {
     currentYearElement.textContent = new Date().getFullYear();
   }
   
-  // Theme switcher
+  // Theme switcher - updated to handle both mobile and desktop switches
   const toggleSwitch = document.querySelector('#checkbox');
+  const toggleSwitchMobile = document.querySelector('#checkbox-mobile');
   const currentTheme = localStorage.getItem('theme');
   
   if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark' && toggleSwitch) {
-      toggleSwitch.checked = true;
+    
+    // Set both switches to match the current theme
+    if (currentTheme === 'dark') {
+      if (toggleSwitch) toggleSwitch.checked = true;
+      if (toggleSwitchMobile) toggleSwitchMobile.checked = true;
     }
   }
   
   function switchTheme(e) {
-    if (e.target.checked) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    }    
+    const isDark = e.target.checked;
+    
+    // Update theme
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    
+    // Keep switches in sync
+    if (toggleSwitch && toggleSwitch !== e.target) {
+      toggleSwitch.checked = isDark;
+    }
+    if (toggleSwitchMobile && toggleSwitchMobile !== e.target) {
+      toggleSwitchMobile.checked = isDark;
+    }
   }
   
+  // Add event listeners to both switches
   if (toggleSwitch) {
     toggleSwitch.addEventListener('change', switchTheme);
+  }
+  
+  if (toggleSwitchMobile) {
+    toggleSwitchMobile.addEventListener('change', switchTheme);
   }
 
   // Navigation toggle for mobile

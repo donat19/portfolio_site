@@ -22,6 +22,16 @@
                 <div class="logo">
                     <a href="#home">Ivan<span class="highlight">.</span>dev</a>
                 </div>
+                <!-- Theme switch for desktop only -->
+                <div class="theme-switch-wrapper desktop-only">
+                    <label class="theme-switch" for="checkbox" title="Toggle dark mode">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </div>
+                    </label>
+                </div>
                 <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
                     <span class="sr-only">Menu</span>
                     <div class="hamburger"></div>
@@ -33,16 +43,20 @@
                     <li><a href="#projects"><i class="fas fa-code fa-fw"></i> Projects</a></li>
                     <li><a href="#skills"><i class="fas fa-tools fa-fw"></i> Skills</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope fa-fw"></i> Contact</a></li>
-                </ul>
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox" title="Toggle dark mode">
-                        <input type="checkbox" id="checkbox" />
-                        <div class="slider round">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
+                    <!-- Theme switch for mobile only -->
+                    <li class="mobile-only theme-switch-item">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox-mobile" title="Toggle dark mode">
+                                <span>Dark Mode</span>
+                                <input type="checkbox" id="checkbox-mobile" />
+                                <div class="slider round">
+                                    <i class="fas fa-sun"></i>
+                                    <i class="fas fa-moon"></i>
+                                </div>
+                            </label>
                         </div>
-                    </label>
-                </div>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
