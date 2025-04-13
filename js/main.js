@@ -646,6 +646,64 @@ document.addEventListener('DOMContentLoaded', function() {
   if (scrollIndicator) {
     scrollIndicator.style.animation = 'bounce 2s infinite';
   }
+
+  // Animate skill circles when they come into view
+  const skillCards = document.querySelectorAll('.skill-card');
+  
+  const skillCircleObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const skillCard = entry.target;
+        const level = skillCard.dataset.level;
+        const skillCircle = skillCard.querySelector('.skill-circle-progress');
+        
+        // Calculate stroke-dashoffset based on percentage
+        // Full circle is 283 (2 * PI * 45)
+        const offset = 283 - (283 * level / 100);
+        
+        // Delay animation slightly for visual effect
+        setTimeout(() => {
+          skillCircle.style.strokeDashoffset = offset;
+        }, 300);
+        
+        skillCircleObserver.unobserve(skillCard);
+      }
+    });
+  }, { threshold: 0.2 });
+  
+  skillCards.forEach(card => {
+    skillCircleObserver.observe(card);
+  });
+
+  // Animate skill levels when card is flipped or visible
+  const skillFlipCards = document.querySelectorAll('.skill-flip-card');
+  
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const card = entry.target;
+        const skillFill = card.querySelector('.skill-level-fill');
+        const level = card.dataset.level;
+        
+        // Delay animation slightly for visual effect
+        setTimeout(() => {
+          skillFill.style.width = `${level}%`;
+        }, 300);
+        
+        skillObserver.unobserve(card);
+      }
+    });
+  }, { threshold: 0.5 });
+  
+  skillFlipCards.forEach(card => {
+    skillObserver.observe(card);
+    
+    // Optional: Enable touch flip for mobile
+    card.addEventListener('touchstart', function() {
+      const inner = this.querySelector('.skill-flip-inner');
+      inner.style.transform = inner.style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)';
+    });
+  });
 });
 
 // Add bounce animation if not already defined in CSS

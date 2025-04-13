@@ -466,10 +466,18 @@ html[data-theme='dark'] .navbar {
 }
 
 .resume-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--spacing-md);
+}
+
+.resume-column {
+  max-width: 800px;
+  width: 100%;
+}
+
+.education-column {
+  margin: 0 auto;
 }
 
 .resume-column h3 {
@@ -1210,4 +1218,304 @@ footer {
 .placeholder img {
   opacity: 0.8;
   mix-blend-mode: multiply;
+}
+
+/* Skills Section - Modernized and Redesigned */
+.skills {
+  background: linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 10% 10%, rgba(82, 113, 255, 0.05) 0%, transparent 70%),
+              radial-gradient(circle at 90% 90%, rgba(255, 84, 112, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.skills .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skills-category {
+  background-color: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  transform: translateY(0);
+}
+
+.skills-category:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow-hover);
+}
+
+.skills-category h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-bg-alt);
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  position: relative;
+}
+
+.skill-card:hover {
+  background-color: var(--color-bg-alt);
+}
+
+.skill-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.skill-circle svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill-circle-bg {
+  fill: none;
+  stroke: var(--color-bg-alt);
+  stroke-width: 8;
+}
+
+.skill-circle-progress {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset 1.5s ease-in-out;
+}
+
+.skill-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.skill-percentage span {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: var(--spacing-xs);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-circle {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .skill-percentage {
+    font-size: 1rem;
+  }
+}
+
+/* Skills Section - New Flip Card Design */
+.skills {
+  background: linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+  position: relative;
+  padding: var(--spacing-xl) 0;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 5% 20%, rgba(82, 113, 255, 0.07) 0%, transparent 50%),
+              radial-gradient(circle at 95% 80%, rgba(255, 84, 112, 0.07) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.skills .container {
+  position: relative;
+  z-index: 1;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skill-category {
+  background-color: var(--color-bg-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.skill-category:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.skill-category h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-bg-alt);
+}
+
+.skills-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+/* Flip Card Animation */
+.skill-flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.skill-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skill-flip-card:hover .skill-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-flip-front, .skill-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-sm);
+}
+
+.skill-flip-front {
+  background: linear-gradient(145deg, var(--color-bg-card), var(--color-bg-alt));
+  box-shadow: var(--box-shadow);
+}
+
+.skill-flip-back {
+  background: linear-gradient(145deg, var(--color-primary-light), var(--color-primary));
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: var(--spacing-xs);
+}
+
+.skill-level-container {
+  width: 100%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skill-level-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.skill-level-fill {
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.skill-level-text {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.skill-details {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .skill-flip-card {
+    height: 180px;
+  }
 }

@@ -58,7 +58,7 @@
                     <div class="cta-buttons">
                         <a href="#projects" class="btn primary"><i class="fas fa-code"></i> View My Work</a>
                         <a href="#contact" class="btn secondary"><i class="fas fa-envelope"></i> Contact Me</a>
-                        <a href="assets/files/resume.pdf" class="btn secondary" download><i class="fas fa-download"></i> Resume</a>
+                        <!-- Resume download button removed -->
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@
             <div class="container">
                 <h2 class="section-title">Resume</h2>
                 <div class="resume-content">
-                    <div class="resume-column">
+                    <div class="resume-column education-column">
                         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                         <div class="resume-item">
                             <h4>Web Development Program</h4>
@@ -131,15 +131,6 @@
                             <p class="resume-date">2019</p>
                             <p>Completed primary and secondary education in Ukraine with strong foundations in mathematics and sciences.</p>
                         </div>
-                    </div>
-                    <div class="resume-column">
-                        <h3><i class="fas fa-briefcase"></i> Experience</h3>
-                        <div class="resume-item">
-                            <h4>Junior Web Developer</h4>
-                            <p class="resume-location">Tech Solutions Inc.</p>
-                            <p class="resume-date">2022 - Present</p>
-                            <p>Building responsive websites and web applications using modern frontend technologies. Experienced with Python for backend development and Godot for interactive experiences and game development.</p>
-                        </div>
                         <div class="resume-item">
                             <h4>Technical Skills</h4>
                             <p class="resume-location">Programming Languages & Frameworks</p>
@@ -156,9 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="resume-download">
-                    <a href="assets/files/resume.pdf" class="btn primary" download><i class="fas fa-download"></i> Download Full Resume</a>
-                </div>
+                <!-- Resume download button removed -->
             </div>
         </section>
 
@@ -199,59 +188,173 @@
             <div class="container">
                 <h2 class="section-title">Skills</h2>
                 <div class="skills-container">
+                    <!-- Frontend Skills -->
                     <div class="skill-category">
                         <h3><i class="fas fa-code"></i> Frontend</h3>
-                        <div class="skill-bars">
-                            <div class="skill">
-                                <div class="skill-name">HTML</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 90%;" data-level="90"></div>
+                        <div class="skills-cards">
+                            <div class="skill-flip-card" data-skill="HTML" data-level="90">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
+                                        <h4 class="skill-name">HTML</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="90"></div>
+                                            </div>
+                                            <div class="skill-level-text">90%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>Semantic markup, accessibility best practices</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="skill">
-                                <div class="skill-name">CSS</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 85%;" data-level="85"></div>
+                            
+                            <div class="skill-flip-card" data-skill="CSS" data-level="85">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-css3-alt"></i>
+                                        </div>
+                                        <h4 class="skill-name">CSS</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="85"></div>
+                                            </div>
+                                            <div class="skill-level-text">85%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>Responsive design, animations, Flexbox & Grid</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="skill">
-                                <div class="skill-name">JavaScript</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 80%;" data-level="80"></div>
+                            
+                            <div class="skill-flip-card" data-skill="JavaScript" data-level="80">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-js"></i>
+                                        </div>
+                                        <h4 class="skill-name">JavaScript</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="80"></div>
+                                            </div>
+                                            <div class="skill-level-text">80%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>ES6+, DOM manipulation, async programming</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Backend Skills -->
                     <div class="skill-category">
                         <h3><i class="fas fa-server"></i> Backend</h3>
-                        <div class="skill-bars">
-                            <div class="skill">
-                                <div class="skill-name">Node.js</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 70%;" data-level="70"></div>
+                        <div class="skills-cards">
+                            <div class="skill-flip-card" data-skill="Node.js" data-level="70">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-node-js"></i>
+                                        </div>
+                                        <h4 class="skill-name">Node.js</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="70"></div>
+                                            </div>
+                                            <div class="skill-level-text">70%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>Express, RESTful APIs, server-side development</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="skill">
-                                <div class="skill-name">Python</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 75%;" data-level="75"></div>
+                            
+                            <div class="skill-flip-card" data-skill="Python" data-level="75">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-python"></i>
+                                        </div>
+                                        <h4 class="skill-name">Python</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="75"></div>
+                                            </div>
+                                            <div class="skill-level-text">75%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>Data processing, scripting, algorithm development</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Tools & Frameworks -->
                     <div class="skill-category">
-                        <h3><i class="fas fa-gamepad"></i> Tools & Frameworks</h3>
-                        <div class="skill-bars">
-                            <div class="skill">
-                                <div class="skill-name">Godot Engine</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 65%;" data-level="65"></div>
+                        <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                        <div class="skills-cards">
+                            <div class="skill-flip-card" data-skill="Godot" data-level="65">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-gamepad"></i>
+                                        </div>
+                                        <h4 class="skill-name">Godot Engine</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="65"></div>
+                                            </div>
+                                            <div class="skill-level-text">65%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>2D/3D game development, GDScript</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="skill">
-                                <div class="skill-name">Git</div>
-                                <div class="skill-bar">
-                                    <div class="skill-level" style="width: 70%;" data-level="70"></div>
+                            
+                            <div class="skill-flip-card" data-skill="Git" data-level="70">
+                                <div class="skill-flip-inner">
+                                    <div class="skill-flip-front">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-git-alt"></i>
+                                        </div>
+                                        <h4 class="skill-name">Git</h4>
+                                    </div>
+                                    <div class="skill-flip-back">
+                                        <div class="skill-level-container">
+                                            <div class="skill-level-bar">
+                                                <div class="skill-level-fill" data-level="70"></div>
+                                            </div>
+                                            <div class="skill-level-text">70%</div>
+                                        </div>
+                                        <div class="skill-details">
+                                            <p>Version control, branching, collaborative workflow</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,14 +371,14 @@
                         <h3>Contact Information</h3>
                         <p>Feel free to reach out to me for collaborations or questions.</p>
                         <ul class="contact-list">
-                            <li><i class="fas fa-envelope"></i> email@example.com</li>
-                            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
-                            <li><i class="fas fa-map-marker-alt"></i> City, Country</li>
+                            <li><i class="fas fa-envelope"></i> izymaliov@gmail.com</li>
+                            <li><i class="fas fa-phone"></i> +1(709)8531768</li>
+                            <li><i class="fas fa-map-marker-alt"></i> St. John's, Canada</li>
                         </ul>
                         <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                            <a href="https://github.com/donat19" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://www.linkedin.com/in/ivan-zymalov-287534243/" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <!-- Twitter link removed -->
                         </div>
                     </div>
                     <div class="contact-form">
@@ -330,9 +433,9 @@
             <div class="footer-content">
                 <p>&copy; <span id="currentYear"></span> Ivan. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/donat19" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ivan-zymalov-287534243/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <!-- Twitter icon removed -->
                 </div>
             </div>
         </div>
