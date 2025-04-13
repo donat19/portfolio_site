@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     lastScrollTop = scrollTop;
   });
 
-  // Enhanced project data
+  // Enhanced project data - removed placeholders
   const projectsData = [
     {
       id: 1,
@@ -74,50 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
       liveUrl: 'https://github.com/donat19/python_reymarching_render',
       codeUrl: 'https://github.com/donat19/python_reymarching_render',
       techStack: ['Python', 'NumPy', 'Computer Graphics', 'Ray Marching', 'Distance Fields']
-    },
-    {
-      id: 2,
-      title: 'E-Commerce Website',
-      category: 'web',
-      description: 'A fully responsive e-commerce platform with product filtering, cart functionality, and user authentication.',
-      detailedDescription: 'This e-commerce platform features a modern, responsive design that works seamlessly on desktop and mobile devices. Users can browse products, filter by category, add items to cart, and complete the checkout process. The admin panel allows store owners to manage products, track orders, and view sales analytics.',
-      image: 'project-1.jpg',
-      liveUrl: '#',
-      codeUrl: '#',
-      techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'SASS']
-    },
-    {
-      id: 3,
-      title: 'Mobile App UI Design',
-      category: 'design',
-      description: 'UI/UX design for a fitness tracking mobile application with a clean, modern interface.',
-      detailedDescription: 'This fitness tracking app design focuses on user experience with intuitive navigation and clear data visualization. The design includes screens for activity tracking, workout planning, nutrition monitoring, and social features to connect with friends and share achievements.',
-      image: 'project-2.jpg',
-      liveUrl: '#',
-      codeUrl: '#',
-      techStack: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Prototyping']
-    },
-    {
-      id: 4,
-      title: 'Task Management App',
-      category: 'app',
-      description: 'A web application for managing tasks, projects, and team collaboration.',
-      detailedDescription: 'This task management application helps teams stay organized with features for creating projects, assigning tasks, setting deadlines, and tracking progress. The app includes real-time updates, file sharing capabilities, and integrations with popular calendar and communication tools.',
-      image: 'project-3.jpg',
-      liveUrl: '#',
-      codeUrl: '#',
-      techStack: ['Vue.js', 'Firebase', 'Vuex', 'TailwindCSS', 'Jest']
-    },
-    {
-      id: 5,
-      title: 'Portfolio Template',
-      category: 'web',
-      description: 'A customizable portfolio template for developers and designers to showcase their work.',
-      detailedDescription: 'This portfolio template is designed for developers and designers who want a professional way to showcase their projects. It features a clean, modern design with smooth animations, project filtering, and responsive layout. The template is fully customizable and easy to deploy.',
-      image: 'project-4.jpg',
-      liveUrl: '#',
-      codeUrl: '#',
-      techStack: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Responsive Design']
     }
   ];
 
@@ -491,8 +447,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const carouselIndicators = document.getElementById('carouselIndicators');
   
   if (projectCarousel && prevProjectBtn && nextProjectBtn && carouselIndicators) {
-    // Featured projects (using the first 3 projects from projectsData)
-    const featuredProjects = projectsData.slice(0, 3);
+    // Featured projects (using all available projects since we only have one)
+    const featuredProjects = projectsData;
     let currentSlide = 0;
     
     // Create carousel slides
